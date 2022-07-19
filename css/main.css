@@ -1,0 +1,116 @@
+:root {
+    --primaryColor: #D6C4A4;
+    --secondaryColor: #B28C19;
+    --textColor-black: #2e2d2c;
+    --textColor-white: #FFEECA;
+}
+@font-face {
+    font-family: Gotham-Rounded-Book;
+    src: url(../fonts/gotham-rounded/GothamRounded-Book.otf);
+}
+@font-face {
+    font-family: Gotham-Rounded-Bold;
+    src: url(../fonts/gotham-rounded/GothamRounded-Bold.otf);
+}
+@font-face {
+    font-family: Gotham-Rounded-Medium;
+    src: url(../fonts/gotham-rounded/GothamRounded-Medium.otf);
+}
+
+
+* {
+    font-family: "Helvetica Neue", serif;
+    font-size: 18px;
+    color: var(--textColor-black);
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--textColor-black);
+}
+a {
+    text-decoration: none;
+}
+
+* > p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.libraryLink {
+    color:  var(--secondaryColor);
+    transition: .2s ease-in-out;
+    display: inherit;
+}
+.libraryLink:after {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    content: "\f178";
+    padding-left: 10px;
+}
+
+.libraryLink:hover{
+    color:  var(--textColor-black);
+    transition: .2s ease-in-out;
+}
+
+.libraryButton {
+    background:  var(--secondaryColor);
+    transition: .4s ease-in-out;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: var(--textColor-white);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 15px;
+    width: auto;
+    display: inline-flex;
+}
+
+.libraryButton:hover {
+    background:  var(--textColor-white);
+    color: var(--textColor-black);
+    transition: .4s ease-in-out;
+    
+}
+.main-title {
+    font-family: Gotham-Rounded-Medium;
+    font-size: 36px;
+    line-height: 54px;
+    color: var(--textColor-black);
+}
+.sub-title {
+    font-family: Gotham-Rounded-Medium;
+    font-size: 30px;
+    color: var(--textColor-black);
+    margin-bottom: 15px;
+}
+.banner-title {
+    font-family: Gotham-Rounded-Book;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--textColor-black);
+}
+.card {
+    border-radius: 15px;
+    border: none;
+    margin-top: 60px;
+}
+.card-img-top {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-size: cover;
+    height: 220px;
+}
+.card-body {
+    background: var(--textColor-white);
+    padding: 30px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+.card-title {
+    font-family: Gotham-Rounded-Medium;
+}
+.card-link {
+    padding-top: 15px;
+}
