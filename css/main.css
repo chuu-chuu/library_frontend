@@ -1,8 +1,8 @@
 :root {
-    --primaryColor: #D6C4A4;
-    --secondaryColor: #B28C19;
-    --textColor-black: #2e2d2c;
-    --textColor-white: #FFEECA;
+    --primaryColor: #2E686A;
+    --secondaryColor: #EEE8A9;
+    --textColor-black: #324B4A;
+    --textColor-white: #fff;
 }
 @font-face {
     font-family: Gotham-Rounded-Book;
@@ -21,14 +21,21 @@
 * {
     font-family: "Helvetica Neue", serif;
     font-size: 18px;
-    color: var(--textColor-black);
+    color: var(--textColor-white);
 }
 .form-control:focus {
     box-shadow: none;
     border-color: var(--textColor-black);
 }
+.navbar {
+    background-color: var(--primaryColor);
+}
 a {
     text-decoration: none;
+}
+a:focus, .btn:focus {
+    border: none;
+    box-shadow: none;
 }
 
 * > p {
@@ -37,7 +44,7 @@ a {
 }
 
 .libraryLink {
-    color:  var(--secondaryColor);
+    color:  var(--textColor-white);
     transition: .2s ease-in-out;
     display: inherit;
 }
@@ -49,15 +56,52 @@ a {
 }
 
 .libraryLink:hover{
-    color:  var(--textColor-black);
+    color:  var(--secondaryColor);
     transition: .2s ease-in-out;
 }
-
+.sort {
+    background-color: var(--primaryColor);
+    border: none;
+    border-radius: 15px;
+    width: auto;
+    color: var(--textColor-white);
+    padding-left: 35px;
+    padding-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-position: right 30px center;
+}
+.sort:hover {
+    background-color: var(--primaryColor);
+}
+.filter {
+    background-color: var(--primaryColor);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 15px;
+    color: var(--textColor-white);
+    margin-left: auto;
+    display: inherit;
+}
+.filter:hover {
+    color: var(--textColor-white);
+}
+.filter i {
+    padding-right: 15px;
+}
+.sort:focus,
+.filter:focus {
+    outline: none;
+    border-color: none;
+    box-shadow: none;
+}
 .libraryButton {
-    background:  var(--secondaryColor);
+    background:  var(--primaryColor);
     transition: .4s ease-in-out;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 35px;
+    padding-right: 35px;
     color: var(--textColor-white);
     padding-top: 15px;
     padding-bottom: 15px;
@@ -65,9 +109,54 @@ a {
     width: auto;
     display: inline-flex;
 }
-
+.cancelBtn {
+    background-color: transparent;
+    border: 1px solid #2d686a;
+    border-radius: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+section.detail {
+    margin-top: 80px;
+}
+.detailImg {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.bookList .card-body {
+    background: var(--textColor-white);
+    border: 1px solid var(--primaryColor);
+}
+.bookList .card-title,
+.bookList .card-text,
+.bookList .card-link {
+    color: var(--textColor-black);
+}
+.bookList .card-link:hover {
+    color: var(--primaryColor);
+}
+.detail p,
+.detail i {
+    color: var(--textColor-black);
+    margin-bottom: 15px;
+}
+.detail i {
+    margin-right: 10px;
+}
+.modal-title {
+    color: var(--textColor-black)
+}
+.modal label {
+    color: var(--textColor-black);
+}
+section.sort_filter {
+    margin-top: 60px;
+}
 .libraryButton:hover {
-    background:  var(--textColor-white);
+    background:  var(--secondaryColor);
     color: var(--textColor-black);
     transition: .4s ease-in-out;
     
@@ -75,19 +164,19 @@ a {
 .main-title {
     font-family: Gotham-Rounded-Medium;
     font-size: 36px;
-    line-height: 54px;
-    color: var(--textColor-black);
+    line-height: 48px;
+    color: var(--textColor-white);
 }
 .sub-title {
     font-family: Gotham-Rounded-Medium;
     font-size: 30px;
     color: var(--textColor-black);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 .banner-title {
     font-family: Gotham-Rounded-Book;
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 20px;
+    line-height: 32px;
     color: var(--textColor-black);
 }
 .card {
@@ -102,7 +191,7 @@ a {
     height: 220px;
 }
 .card-body {
-    background: var(--textColor-white);
+    background: var(--primaryColor);
     padding: 30px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -113,4 +202,71 @@ a {
 }
 .card-link {
     padding-top: 15px;
+}
+.card-text {
+    font-size: 16px;
+}
+/* Footer */
+.footer {
+    background: var(--primaryColor);
+    padding: 60px 0;
+    margin-top: 80px;
+}
+.footer-link a {
+    color: var(--textColor-white);
+    transition: .3s ease-in-out;
+}
+.footer-link a:hover {
+    color: var(--secondaryColor);
+    transition: .3s ease-in-out;
+}
+.footer-link a::after {
+    content: '|';
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.footer-link a:last-child::after {
+    content: '';
+}
+.footer-social-link a {
+    background: var(--secondaryColor);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 20px;
+    transition: .3s ease-in-out;
+}
+.footer-social-link a:hover {
+    background: var(--textColor-white);
+    transition: .3s ease-in-out;
+}
+.footer-social-link a:hover i {
+    color: var(--textColor-black);
+}
+.footer-social-link i {
+    color: var(--primaryColor);
+}
+.footer .row:nth-child(1) {
+    margin-bottom: 40px;
+}
+/* Footer */
+
+@media (max-width: 992px) { 
+    .detailImg {
+        height: 250px;
+    }
+    .sort_filter {
+        margin-top: 40px;
+    }
+    .latest-libraries {
+        padding-top: 40px;
+    }
+    .footer-social-link {
+        justify-content: center!important;
+    }
+    .copyright {
+        text-align: center;
+        margin-bottom: 25px;
+    }
 }

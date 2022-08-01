@@ -3,7 +3,7 @@
     background-color: var(--primaryColor);
 }
 .navbar-nav a {
-    color: var(--textColor-black);
+    color: var(--textColor-white);
 }
 .navbar-nav a:hover,
 .navbar-nav a.active{
@@ -16,25 +16,32 @@
 }
 .banner .libraryButton {
     display: inline;
+    color: var(--textColor-black);
+    background:  var(--secondaryColor);
+}
+.banner .libraryButton:hover {
+    color: var(--primaryColor);
+    background:  var(--textColor-white);
 }
 
 .Librarynavbar .form-control {
     border-radius: 0;
-    border: 1px solid var(--textColor-black);
+    border: 1px solid var(--textColor-white);
     background: transparent;
     width: 280px;
     max-width: 100%;
 }
 .Librarynavbar .form-control::placeholder {
-    color: var(--textColor-black);
+    color: var(--textColor-white);
 }
 .navbar-brand {
     margin-right: 60px;
 }
 .banner .banner-title {
-    margin-bottom: 30px;
+    margin-bottom: 45px;
     width: 420px;
     max-width: 100;
+    color: var(--textColor-white);
 }
 .banner {
     padding-top: 130px;
@@ -55,6 +62,7 @@
     width: 410px;
     max-width: 100%;
     margin-bottom: 45px;
+    color: var(--textColor-white);
 }
 .banner-img{
    width: 500px;
@@ -83,28 +91,28 @@
 }
 .right-banner-library p,
 .right-banner-store p {
-    color: var(--textColor-white);
+    color: var(--textColor-black);
 }
 /* header */
 
 /* Why Choose Us */
 .why-choose-us {
-    z-index: 1;
-    margin-top: -105px;
+    margin-top: 50px;
 }
 .why-choose-us .sub-title {
-    color: var(--textColor-white);
-    border-bottom: 1px solid var(--textColor-white);
-    padding-bottom: 30px;
+    color: var(--textColor-black);
+    border-bottom: 1px solid var(--textColor-black);
+    padding-bottom: 20px;
+    margin-bottom: 0;
 }
 .why-choose-us .wrapper {
     background: var(--secondaryColor);
-    padding: 30px 120px;
+    padding: 30px 50px;
     border-radius: 25px;
 }
-.why-choose-us  .choose-item {
+.why-choose-us .choose-item {
     width: 33.3%;
-    border-right: 1px solid var(--textColor-white);
+    border-right: 1px solid var(--textColor-black);
     margin-top: 15px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -113,7 +121,7 @@
     border-right: none;
 }
 .why-choose-us .choose-item-icon {
-    background: var(--textColor-white);
+    background: var(--primaryColor);
     border-radius: 50%;
     width: 65px;
     height: 65px;
@@ -123,8 +131,8 @@
     font-size: 24px;
     color: var(--secondaryColor);
 }
-.why-choose-us  p {
-    color: var(--textColor-white);
+.why-choose-us p {
+    color: var(--textColor-black);
     width: 205px;
     margin: 0 auto;
     padding-top: 30px;
@@ -134,7 +142,7 @@
 /* latest-libraries */
 .latest-libraries {
     padding-top: 80px;
-    padding-bottom: 100px;
+   
 }
 .latest-libraries .libraryButton {
     margin-left: auto;
@@ -144,9 +152,7 @@
 /* latest-libraries */
 
 /* latest-book-store */
-.latest-book-store {
-    background: var(--primaryColor);
-}
+
 
 .book-store-bg-img {
     width: 120px;
@@ -165,20 +171,27 @@
 /* our partners */
 section.our-partners {
     padding-top: 80px;
-    padding-bottom: 80px;
 }
 .our-partners .wrapper {
-    border: 1px solid var(--secondaryColor);
-    background: var(--primaryColor);
+    background: var(--secondaryColor);
     margin-top: 40px;
 }
 .our-partner-left {
     padding: 46px 40px;
     text-align: center;
 }
-.our-partner-left  h5,
-.our-partner-left  p{
+.our-partner-left .libraryButton {
+    background-color: var(--primaryColor);
+    color: var(--textColor-white);
+}
+.our-partner-left .libraryButton:hover {
+    background-color: var(--primaryColor);
+    color: var(--textColor-white);
+}
+.our-partner-left h5,
+.our-partner-left p{
     margin-bottom: 25px;
+    color: var(--textColor-black);
 }
 .partner-logo {
     width: 33.33%;
@@ -193,48 +206,40 @@ section.our-partners {
     margin-bottom: 30px;
 }
 /* our partners */
-
-/* Footer */
-.footer {
-    background: var(--primaryColor);
-    padding: 60px 0;
+@media (max-width: 992px) { 
+    .latest-libraries {
+        padding-top: 40px;
+    }
+    .banner-img {
+        display: none;
+    }
+    .right-banner {
+        display: none;
+    }
+    .left-banner {
+        width: 100%;
+        text-align: center;
+    }
+    .left-banner .main-title {
+        width: 100%;
+    }
+    .banner .banner-title {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .why-choose-us .wrapper {
+        background: transparent;
+        padding: 0px;
+    }
+    .why-choose-us .sub-title {
+        border-bottom: none;
+        margin-bottom: 30px;
+    }
+    .why-choose-us i {
+        font-size: 24px;
+        color: var(--textColor-white);
+    }
+    .why-choose-us {
+        margin-bottom: 50px;
+    }
 }
-.footer-link a {
-    color: var(--textColor-black);
-    transition: .3s ease-in-out;
-}
-.footer-link a:hover {
-    color: var(--secondaryColor);
-    transition: .3s ease-in-out;
-}
-.footer-link a::after {
-    content: '|';
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.footer-link a:last-child::after {
-    content: '';
-}
-.footer-social-link a {
-    background: var(--secondaryColor);
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    margin-right: 20px;
-    transition: .3s ease-in-out;
-}
-.footer-social-link a:hover {
-    background: var(--textColor-white);
-    transition: .3s ease-in-out;
-}
-.footer-social-link a:hover i {
-    color: var(--textColor-black);
-}
-.footer-social-link i {
-    color: var(--textColor-white);
-}
-.footer .row:nth-child(1) {
-    margin-bottom: 40px;
-}
-/* Footer */
